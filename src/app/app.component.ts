@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Suma';
+  numero1:number=0;
+  numero2:number=0;
+  resultado:number=0;
+
+  sumar():void{
+    this.resultado = this.numero1+this.numero2;
+  }
+
 }
