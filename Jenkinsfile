@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
 
     agent any
     
@@ -37,17 +37,4 @@
           
      }
    }
-}*/
-
-pipeline {
-    agent {
-        any { image 'node:slim-alpine' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
-    }
 }
