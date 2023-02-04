@@ -77,6 +77,8 @@ post {
 pipeline {
   agent any 
 
+  tools {node.js "node"}
+
   stages{
     
     stage ("antes") {
@@ -85,6 +87,20 @@ pipeline {
         echo ' construyendo'
       }
     }
+    stage ("instalar") {
+
+      steps {
+        sh 'npm install'  
+      }
+    }
+    stage ("instalar") {
+
+      steps {
+        sh 'npm run ng build'  
+      }
+    }
+
+    
     stage ("construir") {
 
       steps {
