@@ -4,7 +4,7 @@ services:
   deploy:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: dockerfile
     restart: always
     ports:
       - '127.0.0.1:4000:80'
