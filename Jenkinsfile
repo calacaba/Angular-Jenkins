@@ -6,12 +6,9 @@ pipeline {
     
       stage("build") {
         steps{
-        echo ' construir'
+          sh "ng serve"
         }
-          stage("test") {
-        steps{
-        echo 'testear'
-        }
+          
      }
    }
 }
