@@ -41,7 +41,7 @@
 
 pipeline {
     agent {
-        docker { image 'node:slim-alpine' }
+        docker { image 'node:slim' }
     }
     stages {
         stage('Test') {
