@@ -79,11 +79,23 @@ pipeline {
 
   stages{
     
+    stage ("antes") {
+
+      steps {
+        echo ' construyendo'
+      }
+    }
     stage ("construir") {
 
       steps {
-        sh 'docker built -t'
-        sh 'docker run -p 127.0.0.1:4000:80 suma'
+        sh 'docker built -t calacaba/app:$BUILD_NUMBER .'
+        //sh 'docker run -p 127.0.0.1:4000:80 suma'
+      }
+    }
+    stage ("PRUEBA") {
+
+      steps {
+        echo ' contruido'
       }
     }
 
