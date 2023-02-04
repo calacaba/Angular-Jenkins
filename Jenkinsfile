@@ -88,8 +88,8 @@ pipeline {
     stage ("construir") {
 
       steps {
-        sh 'docker built -t ${env.project}/${env.module}:${BRANCH_NAME} .'
-        //sh 'docker run -p 127.0.0.1:4000:80 suma'
+        sh 'docker built -t suma .'
+        //sh 'docker run suma -p 127.0.0.1:4000:80'
       }
     }
     stage ("PRUEBA") {
