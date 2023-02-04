@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
 
     agent any
     
@@ -37,9 +37,9 @@
           
      }
    }
-}*/
+}
 
-pipeline {
+/*pipeline {
     agent any 
     environment {
     DOCKERHUB_CREDENTIALS = credentials('calacaba-dockerhub')
@@ -72,4 +72,4 @@ post {
             sh 'docker logout'
         }
     }
-}
+}*/
