@@ -6,7 +6,7 @@ pipeline {
     
       stage("build") {
         steps{
-          sh "ng serve"
+          echo 'constriur'
         }
           
      }
