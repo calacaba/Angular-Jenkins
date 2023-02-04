@@ -1,8 +1,6 @@
 pipeline {
   agent any 
 
-  tools {node.js "node"}
-
   stages{
     
     stage ("antes") {
