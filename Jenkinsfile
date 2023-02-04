@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
 
     agent any
     
@@ -37,7 +37,7 @@ pipeline {
           
      }
    }
-}
+}*/
 
 /*pipeline {
     agent any 
@@ -73,3 +73,20 @@ post {
         }
     }
 }*/
+
+pipeline {
+  agent any 
+
+  stages{
+    
+    stage ("construir") {
+
+      steps {
+        sh 'docker built -t suma'
+        sh 'docker run -p 127.0.0.1:4000:80 suma'
+      }
+    }
+
+
+  }
+}
