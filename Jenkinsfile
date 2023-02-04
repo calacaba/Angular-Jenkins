@@ -82,7 +82,7 @@ pipeline {
     stage ("construir") {
 
       steps {
-        sh 'docker built -t suma'
+        sh 'docker built -t'
         sh 'docker run -p 127.0.0.1:4000:80 suma'
       }
     }
